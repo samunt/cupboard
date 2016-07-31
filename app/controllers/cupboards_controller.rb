@@ -1,4 +1,6 @@
-class CupboardController < ApplicationController
+class CupboardsController < ApplicationController
+  before_action :ensure_logged_in
+  
   def index
     @cupboards = Cupboard.all
   end
