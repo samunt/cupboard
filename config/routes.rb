@@ -1,13 +1,16 @@
 Rails.application.routes.draw do
 
+  root 'welcome#index'
+  
   get 'welcome/index'
+  get '/sign_up', to: 'users#new', as: :sign_up
 
   resources :users do
     resources :cupboards
   end
 
 
-  root 'welcome#index'
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
