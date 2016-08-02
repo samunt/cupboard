@@ -1,12 +1,16 @@
 class CupboardsController < ApplicationController
   before_action :ensure_logged_in
-  
+
   def index
     @cupboards = Cupboard.all
   end
 
   def new
     @cupboard = Cupboard.new
+  end
+
+  def show
+    @cupboard = Cupboard.find(params[:id])
   end
 
   def create

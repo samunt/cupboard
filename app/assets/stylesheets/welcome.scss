@@ -45,9 +45,10 @@ body {
   margin-left: 15px;
 }
 
-.main-button {
+#main-button {
   margin-left: 43%;
   margin-right: 43%;
+  height: 50px;
   margin-top: 150px;
   border: 2px solid black;
   text-align: center;
@@ -57,9 +58,19 @@ body {
   font-weight: 100;
 }
 
-.main-button:hover {
+#main-button:hover {
   background-color: black;
   color: white;
+}
+
+.button-text {
+  vertical-align: middle;
+  line-height: 40px;
+  text-decoration: none;
+}
+
+#new-user {
+  height: 300px;
 }
 
 .nav {

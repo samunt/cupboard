@@ -1,3 +1,12 @@
 // Place all the styles related to the cupboard controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.cupboardcontainer {
+  width: 80%;
+  height: 80%;
+}
+
+.row {
+  float: left;
+  width: 20%;
+}

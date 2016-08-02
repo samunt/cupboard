@@ -1,0 +1,102 @@
+/* line 4, /Users/sammyunterman/Desktop/programming/closet/app/assets/stylesheets/cupboard.scss */
+.cupboardcontainer {
+  width: 80%;
+  height: 80%;
+}
+
+/* line 9, /Users/sammyunterman/Desktop/programming/closet/app/assets/stylesheets/cupboard.scss */
+.row {
+  float: left;
+  width: 20%;
+}
+/* line 5, /Users/sammyunterman/Desktop/programming/closet/app/assets/stylesheets/welcome.scss */
+* {
+  box-sizing: border-box;
+}
+
+/* line 13, /Users/sammyunterman/Desktop/programming/closet/app/assets/stylesheets/welcome.scss */
+.jumbotron {
+  width: 100%;
+  height: 400px;
+  background-color: lightblue;
+  background-size: cover;
+}
+
+/* line 20, /Users/sammyunterman/Desktop/programming/closet/app/assets/stylesheets/welcome.scss */
+.titles {
+  font-family: sans-serif;
+  font-weight: 100;
+  position: relative;
+  text-align: center;
+  top: 50px;
+  color: white;
+}
+
+/* line 29, /Users/sammyunterman/Desktop/programming/closet/app/assets/stylesheets/welcome.scss */
+.subtitles {
+  font-weight: 100;
+  font-family: sans-serif;
+  position: relative;
+  top: 20%;
+  text-align: center;
+  color: white;
+}
+
+/* line 38, /Users/sammyunterman/Desktop/programming/closet/app/assets/stylesheets/welcome.scss */
+.login {
+  font-family: sans-serif;
+  font-weight: 200;
+  text-decoration: none;
+  position: relative;
+  left: 80%;
+  top: 10px;
+  margin-left: 15px;
+}
+
+/* line 48, /Users/sammyunterman/Desktop/programming/closet/app/assets/stylesheets/welcome.scss */
+#main-button {
+  margin-left: 43%;
+  margin-right: 43%;
+  height: 50px;
+  margin-top: 150px;
+  border: 2px solid black;
+  text-align: center;
+  border-radius: 20px;
+  background-color: white;
+  font-family: sans-serif;
+  font-weight: 100;
+}
+
+/* line 61, /Users/sammyunterman/Desktop/programming/closet/app/assets/stylesheets/welcome.scss */
+#main-button:hover {
+  background-color: black;
+  color: white;
+}
+
+/* line 66, /Users/sammyunterman/Desktop/programming/closet/app/assets/stylesheets/welcome.scss */
+.button-text {
+  vertical-align: middle;
+  line-height: 40px;
+  text-decoration: none;
+}
+
+/* line 72, /Users/sammyunterman/Desktop/programming/closet/app/assets/stylesheets/welcome.scss */
+#new-user {
+  height: 300px;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+
