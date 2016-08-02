@@ -6,6 +6,7 @@ class UsersController < ApplicationController
 
     def new
       @user = User.new
+      render :layout => !request.xhr?
     end
 
     def create
