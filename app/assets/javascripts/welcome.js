@@ -1,13 +1,31 @@
 $(function(){
   console.log('main() loaded');
 
-  $('#main-button').on('click', function(e){
-    e.preventDefault();
+  // hide first and second stage of welcome
 
-    $.ajax("/users/new").done(function(responseData) {
-      $("#new-user").html(responseData);
-    }).fail(function() {
-      console.log('Something bad happened. Not sure what.')
+
+  //ajax in new user signup
+  // $.ajax({
+  //   url: '/users/new',
+  //   dataType: 'html'
+  // }).done(function(responseData){
+  //   $('#signup').html(responseData);
+  // });
+
+
+  //listen for button click
+  $('#main-button').click(function(){
+    console.log('clicked');
+    $.ajax({
+      url: '/users/new',
+      dataType: 'html'
+    }).done(function(responseData){
+      $('#signup').html(responseData);
     });
+
   });
+
+
+
+
 });
