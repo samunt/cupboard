@@ -39,11 +39,12 @@
 
 
 .welcomelistitem {
+  display: inline-block;
   text-align: center;
   margin: 0 auto;
   margin-bottom: 20px;
   position: relative;
-  width: 400px;
+  width: 200px;
   font-family: sans-serif;
   font-size: 25px;
   padding: 25px;
@@ -86,4 +87,10 @@
 .ineedatext2:hover {
   background-color: black;
   color: white;
+}
+
+.listform {
+  margin: 0 auto;
+  margin-top: 140px;
+  width: 450px;
 }

@@ -7,6 +7,7 @@ class UsersController < ApplicationController
     def new
       @user = User.new
       render :layout => !request.xhr?
+      
     end
 
     def create
@@ -41,6 +42,6 @@ class UsersController < ApplicationController
 
     private
     def user_params
-       params.require(:user).permit(:first_name, :last_name, :email, :password, :password_confirmation, :name)
+       params.require(:user).permit(:id, :first_name, :last_name, :email, :password, :password_confirmation, :name)
     end
 end
