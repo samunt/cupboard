@@ -47,6 +47,6 @@ class CupboardsController < ApplicationController
 
   private
   def cupboard_params
-    params.require(:cupboard).permit(:color, :accent, :top, :bottom, :outer)
+    params.require(:cupboard).permit(:style, :season, :neutral1, :neutral2, :accent1, :accent2)
   end
 end
