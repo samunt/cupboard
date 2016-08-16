@@ -7,18 +7,20 @@ class UsersController < ApplicationController
     def new
       @user = User.new
       render :layout => !request.xhr?
-      
+
     end
 
     def create
       @user = User.new(user_params)
-          if @user.save
-            session[:user_id] = @user.id
-            flash[:success] = 'Welcome!'
-            redirect_to edit_user_path(@user)
-          else
-            render 'new'
-          end
+      if @user.save
+        session[:user_id] = @user.id
+        # UserMailer.welcome_email(@user).deliver_later
+        self.current_user = @user
+        redirect_to user_path(@user), alert: 'SIGNED UP!'
+      else
+        flash[:alert] = "SIGN UP FAILED!"
+        render :new
+      end
     end
 
     def edit
