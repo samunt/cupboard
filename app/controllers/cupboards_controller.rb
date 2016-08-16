@@ -1,5 +1,5 @@
 class CupboardsController < ApplicationController
-  before_action :ensure_logged_in
+  before_action :require_login
 
   def index
     @cupboards = Cupboard.all
@@ -10,7 +10,10 @@ class CupboardsController < ApplicationController
   end
 
   def show
-    @cupboard = Cupboard.find(params[:id])
+    if @cupboard = Cupboard.find(params[:id])
+    else
+      redirect_to new_cupboard_path
+    end
   end
 
   def create

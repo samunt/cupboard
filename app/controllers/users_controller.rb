@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+    skip_before_action :require_login, only: [:new, :create]
 
     def show
       @user = User.find(params[:id])
@@ -14,7 +15,6 @@ class UsersController < ApplicationController
       @user = User.new(user_params)
       if @user.save
         session[:user_id] = @user.id
-        # UserMailer.welcome_email(@user).deliver_later
         self.current_user = @user
         redirect_to user_path(@user), alert: 'SIGNED UP!'
       else
