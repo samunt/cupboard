@@ -20,7 +20,7 @@ def create
   @user = User.find(params[:user_id])
   @cupboard = @user.cupboards.new(cupboard_params)
  if @cupboard.save
-   redirect_to user_cupboard_path(@user, @cupboard)
+   redirect_to edit_user_cupboard_path(@user, @cupboard)
  else
    render :new
  end
