@@ -16,14 +16,24 @@ class CupboardsController < ApplicationController
     end
   end
 
-  def create
-    @cupboard = Cupboard.new(cupboard_params)
-    if @cupboard.save
-      redirect_to user_path(@user)
-    else
-      render :new
-    end
-  end
+def create
+  @user = User.find(params[:user_id])
+  @cupboard = @user.cupboards.new(cupboard_params)
+ if @cupboard.save
+   redirect_to user_cupboard_path(@user, @cupboard)
+ else
+   render :new
+ end
+end
+
+  # def create
+  #   @cupboard = Cupboard.new(cupboard_params)
+  #   if @cupboard.save
+  #     redirect_to user_cupboard_path(@user, @cupboard)
+  #   else
+  #     render :new
+  #   end
+  # end
 
   def edit
     @cupboard = Cupboard.find(params[:id])
@@ -47,6 +57,7 @@ class CupboardsController < ApplicationController
 
   private
   def cupboard_params
-    params.require(:cupboard).permit(:style, :season, :neutral1, :neutral2, :accent1, :accent2)
+    # I used .fetch because .permit wasnt working. workaround found at http://stackoverflow.com/questions/24944871/actioncontrollerparametermissing-param-is-missing-or-the-value-is-empty-film
+    params.fetch(:cupboard, {}).permit(:style, :season, :neutral1, :neutral2, :accent1, :accent2)
   end
 end
