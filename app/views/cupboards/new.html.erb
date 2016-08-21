@@ -7,22 +7,22 @@
     </p>
     <%= form_for @cupboard, url: { action: "create" }, html: { class: "listform"} do |f| %>
       <%= f.label "ATHLEISURE", class: "welcomelistitem" %>
-      <%= radio_button_tag(:style, "ATHLEISURE") %>
+      <%= f.radio_button(:style, "ATHLEISURE") %>
 
       <%= f.label "CASUAL", class: "welcomelistitem" %>
-      <%= radio_button_tag(:style, "CASUAL") %>
+      <%= f.radio_button(:style, "CASUAL") %>
 
       <%= f.label "PROFESISONAL", class: "welcomelistitem" %>
-      <%= radio_button_tag(:style, "PROFESSIONAL") %>
+      <%= f.radio_button(:style, "PROFESSIONAL") %>
 
       <%= f.label "WEEKEND", class: "welcomelistitem" %>
-      <%= radio_button_tag(:style, "WEEKEND") %>
+      <%= f.radio_button(:style, "WEEKEND") %>
 
       <%= f.label "FESTIVAL", class: "welcomelistitem" %>
-      <%= radio_button_tag(:style, "FESTIVAL") %>
+      <%= f.radio_button(:style, "FESTIVAL") %>
 
       <%= f.label "DATENIGHT", class: "welcomelistitem" %>
-      <%= radio_button_tag(:style, "DATENIGHT") %>
+      <%= f.radio_button(:style, "DATENIGHT") %>
 
     <%= f.submit 'Make a new closet' %>
     <% end %>
