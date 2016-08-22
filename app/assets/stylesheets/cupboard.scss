@@ -10,3 +10,17 @@
   float: left;
   width: 20%;
 }
+
+.generalcolor {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 1px solid black
+}
+
+#colorlist {
+  position: relative;
+  float: left;
+  overflow: hidden;
+}
