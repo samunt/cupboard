@@ -15,10 +15,10 @@ $(function(){
   $('#clr1').on('click', function(){
     console.log('color 1 clicked')
     color = "#FFFFFF"
-    $.ajax{
-      url: "/users/:id/cupboards/:id/update",
+    $.ajax({
+      url: ,
       method: "POST",
-      data: { color }
-    }
+      data: { neutral1: color }
+    }).done();
   });
 });
