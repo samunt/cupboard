@@ -1,6 +1,10 @@
 // Place all the styles related to the cupboard controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  background-color: grey; 
+}
+
 .cupboardcontainer {
   width: 80%;
   height: 80%;
@@ -33,4 +37,51 @@
   overflow: hidden;
   width: 350px;
   display: inline-block;;
+}
+
+.radio {
+    display: block;
+    position: relative;
+    border-radius: 100%;
+    margin-bottom: 10px;
+    height: 25px;
+    width: 25px;
+  	z-index: 5;
+
+}
+
+.radio [type=radio] {
+  visibility: hidden;
+}
+
+#clr1 {
+  border: 25px solid #FFFFFF;
+}
+
+#clr2 {
+  border: 25px solid #804002;
+}
+
+#clr3 {
+  border: 25px solid #808080;
+}
+
+#clr4 {
+  border: 25px solid #000000;
+}
+
+#clr5 {
+  border: 25px solid #EADAC1;
+}
+
+#clr6 {
+  border: 25px solid #F7EEE5;
+}
+
+#clr7 {
+  border: 25px solid #715F39;
+}
+
+#clr8 {
+  border: 25px solid #02247D;
 }

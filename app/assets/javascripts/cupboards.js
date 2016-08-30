@@ -2,7 +2,7 @@ $(function(){
   console.log('cupboard js loaded')
   var color = "none"
   // color all the circles
-  $('#clr1').css("background-color", "#FFFFFF");
+  $('#cupboard_neutral1_000000').css("background-color", "#FFFFFF", "width", "100px", "height", "100px");
   $('#clr2').css("background-color", "#804002");
   $('#clr3').css("background-color", "#808080");
   $('#clr4').css("background-color", "#000000");
@@ -16,7 +16,7 @@ $(function(){
     console.log('color 1 clicked')
     color = "#FFFFFF"
     $.ajax({
-      url: ,
+      url: $this(),
       method: "POST",
       data: { neutral1: color }
     }).done();

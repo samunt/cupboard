@@ -1,6 +1,21 @@
 <h1>edit cupboard</h1>
 
 <h2>Choose 2 neutrals</h2>
+
+<%= form_for [@cupboard], url: {action: "update"} do |f| %>
+<ul>
+  <li id="clr1" class="radio"><%= f.radio_button(:neutral1, "#FFFFFF") %></li>
+  <li id="clr2" class="radio"><%= f.radio_button(:neutral1, "#804002") %></li>
+  <li id="clr3" class="radio"><%= f.radio_button(:neutral1, "#808080") %></li>
+  <li id="clr4" class="radio"><%= f.radio_button(:neutral1, "#000000") %></li>
+  <li id="clr5" class="radio"><%= f.radio_button(:neutral1, "#EADAC1") %></li>
+  <li id="clr6" class="radio"><%= f.radio_button(:neutral1, "#F7EEE5") %></li>
+  <li id="clr7" class="radio"><%= f.radio_button(:neutral1, "#715F39") %></li>
+  <li id="clr8" class="radio"><%= f.radio_button(:neutral1, "#02247D") %></li>
+</ul>
+  <%= f.submit %>
+<% end %>
+<!--
 <div id="colorlist">
   <div id="clr1" class="generalcolor">
 
@@ -25,5 +40,5 @@
   </div>
   <div id="clr8" class="generalcolor">
 
-  </div>
-</div>
+  </div> -->
+<!-- </div> -->
