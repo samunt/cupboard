@@ -1,20 +1,62 @@
 <h1>edit cupboard</h1>
 
-<h2>Choose 2 neutrals</h2>
+<!-- <h2>Choose a neutral</h2> -->
 
-<%= form_for [@cupboard], url: {action: "update"} do |f| %>
-<ul>
-  <li id="clr1" class="radio"><%= f.radio_button(:neutral1, "#FFFFFF") %></li>
-  <li id="clr2" class="radio"><%= f.radio_button(:neutral1, "#804002") %></li>
-  <li id="clr3" class="radio"><%= f.radio_button(:neutral1, "#808080") %></li>
-  <li id="clr4" class="radio"><%= f.radio_button(:neutral1, "#000000") %></li>
-  <li id="clr5" class="radio"><%= f.radio_button(:neutral1, "#EADAC1") %></li>
-  <li id="clr6" class="radio"><%= f.radio_button(:neutral1, "#F7EEE5") %></li>
-  <li id="clr7" class="radio"><%= f.radio_button(:neutral1, "#715F39") %></li>
-  <li id="clr8" class="radio"><%= f.radio_button(:neutral1, "#02247D") %></li>
-</ul>
+<!-- <div class="container" style="background-color: #03a9f4;"> -->
+
+
+  <!-- <%= form_for [@cupboard], url: {action: "update"} do |f| %>
+  <ul>
+    <li id="clr1" class="radio"><%= f.radio_button(:neutral1, "#FFFFFF") %></li>
+    <li id="clr2" class="radio"><%= f.radio_button(:neutral1, "#804002") %></li>
+    <li id="clr3" class="radio"><%= f.radio_button(:neutral1, "#808080") %></li>
+    <li id="clr4" class="radio"><%= f.radio_button(:neutral1, "#000000") %></li>
+    <li id="clr5" class="radio"><%= f.radio_button(:neutral1, "#EADAC1") %></li>
+    <li id="clr6" class="radio"><%= f.radio_button(:neutral1, "#F7EEE5") %></li>
+    <li id="clr7" class="radio"><%= f.radio_button(:neutral1, "#715F39") %></li>
+    <li id="clr8" class="radio"><%= f.radio_button(:neutral1, "#02247D") %></li>
+  </ul>
+    <%= f.submit %>
+  <% end %> -->
+<!-- </div> -->
+<div class="control-group">
+	<h1>Choose a neutral</h1>
+  <%= form_for [@cupboard], url: {action: "update"} do |f| %>
+	<label class="control control--radio">White
+		<%= f.radio_button(:neutral1, "#FFFFFF") %>
+		<div class="control__indicator"></div>
+	</label>
+	<label class="control control--radio">Brown
+		<%= f.radio_button(:neutral1, "#804002") %>
+		<div class="control__indicator"></div>
+	</label>
+	<label class="control control--radio">Grey
+		<%= f.radio_button(:neutral1, "#808080") %>
+		<div class="control__indicator"></div>
+	</label>
+	<label class="control control--radio">Black
+		<%= f.radio_button(:neutral1, "#000000") %>
+		<div class="control__indicator"></div>
+	</label>
+  <label class="control control--radio">Beige
+    <%= f.radio_button(:neutral1, "#EADAC1") %>
+    <div class="control__indicator"></div>
+  </label>
+  <label class="control control--radio">Cream
+    <%= f.radio_button(:neutral1, "#F7EEE5") %>
+    <div class="control__indicator"></div>
+  </label>
+  <label class="control control--radio">Mud
+    <%= f.radio_button(:neutral1, "#715F39") %>
+    <div class="control__indicator"></div>
+  </label>
+  <label class="control control--radio">Blue
+    <%= f.radio_button(:neutral1, "#02247D") %>
+    <div class="control__indicator"></div>
+  </label>
   <%= f.submit %>
 <% end %>
+</div>
 <!--
 <div id="colorlist">
   <div id="clr1" class="generalcolor">
