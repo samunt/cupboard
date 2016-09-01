@@ -22,35 +22,35 @@
 <div class="control-group">
 	<h1>Choose a neutral</h1>
   <%= form_for [@cupboard], url: {action: "update"} do |f| %>
-	<label class="control control--radio">White
+	<label class="control control--radio" style="background-color: white;">White
 		<%= f.radio_button(:neutral1, "#FFFFFF") %>
 		<div class="control__indicator"></div>
 	</label>
-	<label class="control control--radio">Brown
+	<label class="control control--radio" style="background-color: #804002;">Brown
 		<%= f.radio_button(:neutral1, "#804002") %>
 		<div class="control__indicator"></div>
 	</label>
-	<label class="control control--radio">Grey
+	<label class="control control--radio" style="background-color: #808080;">Grey
 		<%= f.radio_button(:neutral1, "#808080") %>
 		<div class="control__indicator"></div>
 	</label>
-	<label class="control control--radio">Black
+	<label class="control control--radio" style="background-color: black;">Black
 		<%= f.radio_button(:neutral1, "#000000") %>
 		<div class="control__indicator"></div>
 	</label>
-  <label class="control control--radio">Beige
+  <label class="control control--radio" style="background-color: #EADAC1;">Beige
     <%= f.radio_button(:neutral1, "#EADAC1") %>
     <div class="control__indicator"></div>
   </label>
-  <label class="control control--radio">Cream
+  <label class="control control--radio" style="background-color: #F7EEE5;">Cream
     <%= f.radio_button(:neutral1, "#F7EEE5") %>
     <div class="control__indicator"></div>
   </label>
-  <label class="control control--radio">Mud
+  <label class="control control--radio" style="background-color: #715F39;">Mud
     <%= f.radio_button(:neutral1, "#715F39") %>
     <div class="control__indicator"></div>
   </label>
-  <label class="control control--radio">Blue
+  <label class="control control--radio" style="background-color: #02247D;">Blue
     <%= f.radio_button(:neutral1, "#02247D") %>
     <div class="control__indicator"></div>
   </label>

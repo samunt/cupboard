@@ -41,9 +41,9 @@ end
 
   def update
     @cupboard = Cupboard.find(params[:id])
-    if @cupboard.update_attributes(user_params)
+    if @cupboard.update_attributes(cupboard_params)
       flash[:notice] = "CUPBOARD WAS SUCCESSFULLY UPDATED!"
-      redirect_to user_path(@user)
+      redirect_to edit_user_cupboard_path(:user, @cupboard)
     else
       flash[:alert] = "CUPBOARD NOT SUCCESSFULLY UPDATED"
       render :edit
