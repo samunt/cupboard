@@ -1,0 +1,78 @@
+<h1>Accents</h1>
+
+<h2>Accent 1</h2>
+
+<%= form_for [@cupboard], url: {action: "accents"} do |f| %>
+  <label class="control control--radio" style="background-color: #ff0000;">Red
+    <%= f.radio_button(:accent1, "#ff0000") %>
+    <div class="control__indicator"></div>
+  </label>
+  <label class="control control--radio" style="background-color: #cc33ff;">Violet
+    <%= f.radio_button(:accent1, "#cc33ff") %>
+    <div class="control__indicator"></div>
+  </label>
+  <label class="control control--radio" style="background-color: #00ff00;">Lime
+    <%= f.radio_button(:accent1, "#00ff00") %>
+    <div class="control__indicator"></div>
+  </label>
+  <label class="control control--radio" style="background-color: #ff6600">Orange
+    <%= f.radio_button(:accent1, "#ff6600") %>
+    <div class="control__indicator"></div>
+  </label>
+  <label class="control control--radio" style="background-color: #00e6e6;">Aqua
+    <%= f.radio_button(:accent1, "#00e6e6") %>
+    <div class="control__indicator"></div>
+  </label>
+  <label class="control control--radio" style="background-color: #ff6699;">Pink
+    <%= f.radio_button(:accent1, "#ff6699") %>
+    <div class="control__indicator"></div>
+  </label>
+  <label class="control control--radio" style="background-color: #ffff00;">Yellow
+    <%= f.radio_button(:accent1, "#ffff00") %>
+    <div class="control__indicator"></div>
+  </label>
+  <label class="control control--radio" style="background-color: #cc3399;">Purple
+    <%= f.radio_button(:accent1, "#cc3399") %>
+    <div class="control__indicator"></div>
+  </label>
+
+  <!-- accent 2 -->
+
+  <h2>Accent 2</h2>
+
+  <label class="control control--radio" style="background-color: #ff0000;">Red
+    <%= f.radio_button(:accent2, "#ff0000") %>
+    <div class="control__indicator"></div>
+  </label>
+  <label class="control control--radio" style="background-color: #cc33ff;">Violet
+    <%= f.radio_button(:accent2, "#cc33ff") %>
+    <div class="control__indicator"></div>
+  </label>
+  <label class="control control--radio" style="background-color: #00ff00;">Lime
+    <%= f.radio_button(:accent2, "#00ff00") %>
+    <div class="control__indicator"></div>
+  </label>
+  <label class="control control--radio" style="background-color: #ff6600">Orange
+    <%= f.radio_button(:accent2, "#ff6600") %>
+    <div class="control__indicator"></div>
+  </label>
+  <label class="control control--radio" style="background-color: #00e6e6;">Aqua
+    <%= f.radio_button(:accent2, "#00e6e6") %>
+    <div class="control__indicator"></div>
+  </label>
+  <label class="control control--radio" style="background-color: #ff6699;">Pink
+    <%= f.radio_button(:accent2, "#ff6699") %>
+    <div class="control__indicator"></div>
+  </label>
+  <label class="control control--radio" style="background-color: #ffff00;">Yellow
+    <%= f.radio_button(:accent2, "#ffff00") %>
+    <div class="control__indicator"></div>
+  </label>
+  <label class="control control--radio" style="background-color: #cc3399;">Purple
+    <%= f.radio_button(:accent2, "#cc3399") %>
+    <div class="control__indicator"></div>
+  </label>
+
+  <%= f.submit %>
+
+<% end %>

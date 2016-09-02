@@ -16,24 +16,16 @@ class CupboardsController < ApplicationController
     end
   end
 
-def create
-  @user = User.find(params[:user_id])
-  @cupboard = @user.cupboards.new(cupboard_params)
- if @cupboard.save
-   redirect_to edit_user_cupboard_path(@user, @cupboard)
- else
-   render :new
- end
-end
+  def create
+    @user = User.find(params[:user_id])
+    @cupboard = @user.cupboards.new(cupboard_params)
+    if @cupboard.save
+      redirect_to edit_user_cupboard_path(@user, @cupboard)
+    else
+      render :new
+    end
+  end
 
-  # def create
-  #   @cupboard = Cupboard.new(cupboard_params)
-  #   if @cupboard.save
-  #     redirect_to user_cupboard_path(@user, @cupboard)
-  #   else
-  #     render :new
-  #   end
-  # end
 
   def edit
     @cupboard = Cupboard.find(params[:id])
@@ -43,7 +35,19 @@ end
     @cupboard = Cupboard.find(params[:id])
     if @cupboard.update_attributes(cupboard_params)
       flash[:notice] = "CUPBOARD WAS SUCCESSFULLY UPDATED!"
-      redirect_to edit_user_cupboard_path(:user, @cupboard)
+      redirect_to action: "accents"
+    else
+      flash[:alert] = "CUPBOARD NOT SUCCESSFULLY UPDATED"
+      render :edit
+    end
+  end
+
+  def accents
+    @cupboard = Cupboard.find(params[:id])
+  
+    if @cupboard.update_attributes(cupboard_params)
+      flash[:notice] = "CUPBOARD WAS SUCCESSFULLY UPDATED!"
+      redirect_to action: "show"
     else
       flash[:alert] = "CUPBOARD NOT SUCCESSFULLY UPDATED"
       render :edit
