@@ -10,17 +10,17 @@ class CupboardsController < ApplicationController
   end
 
   def show
-    if @cupboard = Cupboard.find(params[:id])
-      # require 'rubygems'
-      # require 'rest_client'
-      # require 'cgi'
-      # url = 'https://api.shop.com:8443/stores/v1/products/{prodID}'.gsub('{prodID}',CGI::escape('874694776'))
-      # headers  = { 'apikey' => 'l7xx1c4621368c824e9e88aef19ff99def17' , :params => { CGI::escape('allperms') => 'false' } }
-      # response = RestClient::Request.execute :method => 'GET', :url => url , :headers => headers
-      #
-    else
-      redirect_to new_cupboard_path
-    end
+    # if @cupboard = Cupboard.find(params[:id])
+    #   # require 'rubygems'
+    #   # require 'rest_client'
+    #   # require 'cgi'
+    #   # url = 'https://api.shop.com:8443/stores/v1/products/{prodID}'.gsub('{prodID}',CGI::escape('874694776'))
+    #   # headers  = { 'apikey' => 'l7xx1c4621368c824e9e88aef19ff99def17' , :params => { CGI::escape('allperms') => 'false' } }
+    #   # response = RestClient::Request.execute :method => 'GET', :url => url , :headers => headers
+    #   #
+    # else
+    #   redirect_to new_cupboard_path
+    # end
   end
 
   def create
@@ -63,6 +63,8 @@ class CupboardsController < ApplicationController
   end
 
   def updateaccent
+    @cupboard = Cupboard.find(params[:id])
+    @user = User.find(params[:user_id])
     if @cupboard.update_attributes(cupboard_params)
       flash[:notice] = "Updated accents!"
       render :show

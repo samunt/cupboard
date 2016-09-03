@@ -2,7 +2,7 @@
 
 <h2>Accent 1</h2>
 
-<%= form_for [@user, @cupboard], url: {action: "updateaccent"} do |f| %>
+<%= form_for [:user, @cupboard], url: {action: "updateaccent"} do |f| %>
   <label class="control control--radio" style="background-color: #ff0000;">Red
     <%= f.radio_button(:accent1, "#ff0000") %>
     <div class="control__indicator"></div>
