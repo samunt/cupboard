@@ -11,6 +11,13 @@ class CupboardsController < ApplicationController
 
   def show
     if @cupboard = Cupboard.find(params[:id])
+      # require 'rubygems'
+      # require 'rest_client'
+      # require 'cgi'
+      # url = 'https://api.shop.com:8443/stores/v1/products/{prodID}'.gsub('{prodID}',CGI::escape('874694776'))
+      # headers  = { 'apikey' => 'l7xx1c4621368c824e9e88aef19ff99def17' , :params => { CGI::escape('allperms') => 'false' } }
+      # response = RestClient::Request.execute :method => 'GET', :url => url , :headers => headers
+      #
     else
       redirect_to new_cupboard_path
     end
@@ -44,10 +51,22 @@ class CupboardsController < ApplicationController
 
   def accents
     @cupboard = Cupboard.find(params[:id])
-  
+
+    # if @cupboard.update_attributes(cupboard_params)
+    #   flash[:notice] = "Updated accents!"
+    #   render :show
+    #   #redirect_to action: "show"
+    # else
+    #   flash[:alert] = "CUPBOARD NOT SUCCESSFULLY UPDATED"
+    #   render :edit
+    # end
+  end
+
+  def updateaccent
     if @cupboard.update_attributes(cupboard_params)
-      flash[:notice] = "CUPBOARD WAS SUCCESSFULLY UPDATED!"
-      redirect_to action: "show"
+      flash[:notice] = "Updated accents!"
+      render :show
+      #redirect_to action: "show"
     else
       flash[:alert] = "CUPBOARD NOT SUCCESSFULLY UPDATED"
       render :edit
