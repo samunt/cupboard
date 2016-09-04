@@ -67,7 +67,7 @@ class CupboardsController < ApplicationController
     @user = User.find(params[:user_id])
     if @cupboard.update_attributes(cupboard_params)
       flash[:notice] = "Updated accents!"
-      render :show
+      redirect_to user_cupboard_path
       #redirect_to action: "show"
     else
       flash[:alert] = "CUPBOARD NOT SUCCESSFULLY UPDATED"

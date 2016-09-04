@@ -21,4 +21,20 @@ $(function(){
       data: { neutral1: color }
     }).done();
   });
+
+
+  $("#buttonapi").on('click', function(){
+    console.log('button pressed')
+    $.ajax ({
+      url: "https://developer.shop.com/documentation/ProductService",
+      method: 'GET',
+      data: {},
+      dataType: 'json'
+    }).done(function(responseData){
+      $('#placeapiresponse').append(responseData);
+    }).fail(function(){
+      console.log('ajax api request failed')
+    });
+  });
+
 });
