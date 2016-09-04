@@ -26,11 +26,11 @@ $(function(){
   $("#buttonapi").on('click', function(){
     console.log('button pressed')
     $.ajax ({
-      url: "https://developer.shop.com/documentation/ProductService",
+      url: "https://api.shop.com:8443/stores/v1/products/874694776?allperms=false",
       method: 'GET',
-      data: {},
       dataType: 'json'
     }).done(function(responseData){
+      console.log(responseData);
       $('#placeapiresponse').append(responseData);
     }).fail(function(){
       console.log('ajax api request failed')
