@@ -10,6 +10,53 @@ class CupboardsController < ApplicationController
   end
 
   def show
+
+    #connects with walmart api
+    require "walmart_open"
+
+    client = WalmartOpen::Client.new do |config|
+      ## Product API
+      config.product_api_key = "PUT KEY HERE"
+
+      # This value defaults to 5.
+      config.product_calls_per_second = 4
+
+      # Set this to true for development mode.
+      config.debug = true
+    end
+
+    # Search
+    res = client.search("ipod")
+    #=> SearchResults
+    # example of res
+    # res.query = "ipod"
+    # res.total = 53259
+    # res.start = 1
+    # res.page = ?
+    # res.items = [ Item_1, Item_2 ....]
+
+    # Lookup (by item id)
+    item = client.lookup(15076191)
+    #=> item is of class WalmartOpen::Item, see WalmartOpen::Item section for detail
+    # When item not found, an error of class WalmartOpen::ItemNotFoundError is thrown,
+    # eg: {"errors"=>[{"code"=>4002, "message"=>"Invalid itemId"}]}
+    # When walmart api is down, an error of class WalmartOpen::ServerError is thrown,
+    # eg: {"errors"=>[{"code"=>504, "message"=>"Gateway Timeout"}]}
+
+    # Taxonomy
+    taxonomies = client.taxonomy
+    #=> Array
+    # when success, example of one of taxonomies
+    # taxonomies.categories = {"id"=>"5438", "name"=>"Apparel", "path"=>"Apparel", "children"=>[{"id"=>"5438_426265",
+    # "name"=>"Accessories", "path"=>"Apparel/Accessories", "children"=>[{"id"=>"5438_426265_1043621",
+    #   "name"=>"Bandanas", "path"=>"Apparel/Accessories/Bandanas"}, ...]]}
+
+    # Search special feeds (by feed type, category id)
+    # Feed type can be :preorder, :bestsellers, :rollback, :clearance, :specialbuy
+    # For :preorder case, you do not need to pass param category_id
+    # items = client.feed(:bestsellers, category_id)
+    #=> Array
+    # when success: items is an array of WalmartOpen::Item items
     # if @cupboard = Cupboard.find(params[:id])
     #   # require 'rubygems'
     #   # require 'rest_client'

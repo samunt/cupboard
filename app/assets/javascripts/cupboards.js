@@ -33,7 +33,7 @@ $(function(){
       console.log(responseData);
       $('#placeapiresponse').append(responseData);
     }).fail(function(){
-      console.log('ajax api request failed')
+      console.log('ajax api request failed');
     });
   });
 
