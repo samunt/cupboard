@@ -16,7 +16,7 @@ class CupboardsController < ApplicationController
 
     client = WalmartOpen::Client.new do |config|
       ## Product API
-      config.product_api_key = "PUT KEY HERE"
+      config.product_api_key = ENV['walmart_api_key']
 
       # This value defaults to 5.
       config.product_calls_per_second = 4
@@ -26,7 +26,7 @@ class CupboardsController < ApplicationController
     end
 
     # Search
-    res = client.search("ipod")
+    @res = client.search("ipod")
     #=> SearchResults
     # example of res
     # res.query = "ipod"
@@ -36,7 +36,7 @@ class CupboardsController < ApplicationController
     # res.items = [ Item_1, Item_2 ....]
 
     # Lookup (by item id)
-    item = client.lookup(15076191)
+    @item = client.lookup(15076191)
     #=> item is of class WalmartOpen::Item, see WalmartOpen::Item section for detail
     # When item not found, an error of class WalmartOpen::ItemNotFoundError is thrown,
     # eg: {"errors"=>[{"code"=>4002, "message"=>"Invalid itemId"}]}

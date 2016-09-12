@@ -1,9 +1,8 @@
-<button type="button" name="button" id="buttonapi">Click for API</button>
 <p id="placeapiresponse">
-
+  <%= @res.total %>
 </p>
 <div class="tempcontainer">
-  <img id="pic1" class="tempimg" src="http://lorempixel.com/150/150/fashion/1" alt="" />
+  <img id="pic1" class="tempimg" src="<%= @item.mediumImage %>" alt="" />
   <img id="pic2" class="tempimg" src="http://lorempixel.com/150/150/fashion/87" alt="" />
   <img id="pic3" class="tempimg" src="http://lorempixel.com/150/150/fashion/3" alt="" />
   <img id="pic4" class="tempimg" src="http://lorempixel.com/150/150/fashion/4" alt="" />
